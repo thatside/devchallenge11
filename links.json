@@ -1,0 +1,17 @@
+{
+  "links":
+  [
+    "http://docker-host1.cli.bz:8888/s-rdr-1",
+    "http://docker-host1.cli.bz:8888/s-rdr-2",
+    "http://docker-host1.cli.bz:8888/s-rdr-3",
+    "http://docker-host1.cli.bz:8888/j-rdr-1",
+    "http://docker-host1.cli.bz:8888/j-rdr-2",
+    "http://docker-host1.cli.bz:8888/j-rdr-3",
+    "http://docker-host1.cli.bz:8888/j-rdr-4",
+    "http://docker-host1.cli.bz:8888/j-rdr-5",
+    "http://docker-host1.cli.bz:8888/h-rdr-1",
+    "http://docker-host1.cli.bz:8888/h-rdr-2",
+    "http://docker-host1.cli.bz:8888/h-rdr-3"
+  ]
+
+}

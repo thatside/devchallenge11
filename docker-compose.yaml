@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  chrome:
+    image: yukinying/chrome-headless-browser:65.0.3322.3
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - 9222:9222
+    command: [ "--headless", "--disable-gpu", "--remote-debugging-address=0.0.0.0", "--remote-debugging-port=9222", "--ignore-ssl-errors", "--ignore-certificate-errors" ]
+
+  go:
+    build:
+      context: .
+    volumes:
+      - ./log:/opt/go/src/main/log
+      - ./links.json:/opt/go/src/main/links.json
+    environment:
+      - CHROME_URL=http://chrome:9222
+      - INPUT_FILE=links.json
+      - LOG_FILE=log/unchainer.log
+      - QUIET_MODE=false
+    depends_on:
+      - chrome
